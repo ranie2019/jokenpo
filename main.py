@@ -7,20 +7,13 @@ jokenpo = ['Papel', 'Pedra', 'Tesoura']
 jogar = int(input('Digite sua Opçao: '))
 print('')
 
-if jogar >= 2:
-    print('Opcao Invalida')
-
 while jogar < 1:
     print('Faça Sua Escolha\n 0 = Papel\n 1 = Pedra\n 2 = Tesoura\n')
     escolha = int(input('Digite sua Escolha: '))
 
-    if escolha not in jokenpo:
-        print('Opcao Invalida')
-
     computador = randint(0, 2)
     jogo1 = jokenpo[escolha]
     jogo2 = jokenpo[computador]
-
 
     print(f'Sua Escolha Foi: {jogo1}\nO Computador Escolheu: {jogo2}')
 
@@ -46,9 +39,6 @@ while jogar < 1:
     print(' ')
     jogar = int(input('Digite sua Opçao: '))
     print('')
-
-    if jogar >= 2:
-        print('Opcao Invalida')
 
 else:
     print('Fim De Jogo')

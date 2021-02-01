@@ -3,21 +3,24 @@ from random import randint
 print('Vamos Jogar Jokenpo\n 0 = Sim\n 1 = Nao')
 print(' ')
 
-
 jokenpo = ['Papel', 'Pedra', 'Tesoura']
 jogar = int(input('Digite sua Opçao: '))
 print('')
 
-if jogar >= 3:
+if jogar >= 2:
     print('Opcao Invalida')
 
 while jogar < 1:
     print('Faça Sua Escolha\n 0 = Papel\n 1 = Pedra\n 2 = Tesoura\n')
     escolha = int(input('Digite sua Escolha: '))
-    computador = randint(0, 2)
 
+    if escolha not in jokenpo:
+        print('Opcao Invalida')
+
+    computador = randint(0, 2)
     jogo1 = jokenpo[escolha]
     jogo2 = jokenpo[computador]
+
 
     print(f'Sua Escolha Foi: {jogo1}\nO Computador Escolheu: {jogo2}')
 
@@ -44,7 +47,7 @@ while jogar < 1:
     jogar = int(input('Digite sua Opçao: '))
     print('')
 
-    if jogar >= 3:
+    if jogar >= 2:
         print('Opcao Invalida')
 
 else:
